@@ -1,0 +1,83 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="OSChina.PubTweetPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:water="clr-namespace:WatermarkedTextBoxControl;assembly=WatermarkedTextBoxControl"
+    xmlns:Control="clr-namespace:OSChina.Controls"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Style="{StaticResource TransitionPageStyle}"
+    xmlns:tileEffect="clr-namespace:WP7_ControlsLib.Controls;assembly=WP7_ControlsLib"
+    tileEffect:TiltEffect.IsTiltEnabled="True"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+        <shell:ApplicationBar x:Key="appbar_Face" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="iconFace" IconUri="/Resource/PostIcon/appbar_face.png" Text="表情" Click="iconFace_Click"/>
+            <shell:ApplicationBarIconButton x:Name="iconCamera" IconUri="/Resource/PostIcon/IconCamera.png" Text="拍照" Click="iconCamera_Click"/>
+            <shell:ApplicationBarIconButton x:Name="iconPic" IconUri="/Resource/PostIcon/IconPic.png" Text="照片" Click="iconPic_Click"/>
+            <shell:ApplicationBarIconButton x:Name="iconSend" IconUri="/Resource/PostIcon/IconCheck.png" Text="动弹一下" Click="iconSend_Click"/>
+           
+        </shell:ApplicationBar>
+        <shell:ApplicationBar x:Key="appbar_Keyboard" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="iconKeyboard" IconUri="/Resource/PostIcon/appbar_keyboard.png" Text="键盘" Click="iconFace_Click"/>
+            <shell:ApplicationBarIconButton x:Name="iconCamera1" IconUri="/Resource/PostIcon/IconCamera.png" Text="拍照" Click="iconCamera_Click"/>
+            <shell:ApplicationBarIconButton x:Name="iconPic1" IconUri="/Resource/PostIcon/IconPic.png" Text="照片" Click="iconPic_Click"/>
+            <shell:ApplicationBarIconButton x:Name="iconSend1" IconUri="/Resource/PostIcon/IconCheck.png" Text="动弹一下" Click="iconSend_Click"/>
+            
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,20">
+            <TextBlock x:Name="ApplicationTitle" Text="在开源中国发表动弹" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+
+        <!--ContentPanel - 在此处放置其他内容-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <water:WatermarkedTextBox Name="txtContent" AcceptsReturn="True" TextChanged="txtContent_TextChanged" Height="150"  TextWrapping="Wrap" />
+            <StackPanel Grid.Row="1" Margin="11,9,0,0">
+                <TextBlock x:Name="lblStringlength" Margin="400,-15,0,-20" Text="160" />
+                <!--<TextBlock Text="1. 点击 '+ 图片' 可用来上传一张图片" />-->
+                <TextBlock Text="1. #软件名# 用来引用某个开源软件" FontSize="24" Margin="0,0,0,8" />
+                <TextBlock Text="2. @xxx 用来提到某人" FontSize="24" />
+            </StackPanel>
+            <Image Name="img" Width="300" Height="300" Grid.Row="3" Margin="0,30,0,0" />
+            <StackPanel Name="facePanel" Visibility="Collapsed" Background="#212021" Grid.Row="3" Margin="-12,70,-12,0" >
+                <Control:FaceControl x:Name="faceControl" VerticalAlignment="Top" Height="330"/>
+            </StackPanel>
+            
+        </Grid>
+    </Grid>
+ 
+    <!--演示 ApplicationBar 用法的示例代码-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" Opacity="0.75" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="iconCamera" IconUri="/Resource/PostIcon/IconCamera.png" Text="拍照" Click="iconCamera_Click"/>
+            <shell:ApplicationBarIconButton x:Name="iconPic" IconUri="/Resource/PostIcon/IconPic.png" Text="照片" Click="iconPic_Click"/>
+            <shell:ApplicationBarIconButton x:Name="iconSend" IconUri="/Resource/PostIcon/appbar_face.png" Text="动弹一下" Click="iconSend_Click"/>
+            <shell:ApplicationBarIconButton x:Name="iconFace" IconUri="/Resource/PostIcon/smile.png" Text="表情" Click="iconSend_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

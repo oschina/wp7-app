@@ -1,0 +1,176 @@
+﻿<Application 
+    x:Class="OSChina.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:Code4FunControls="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!--应用程序资源-->
+    <Application.Resources>
+        <Style x:Key="TransitionPageStyle" TargetType="phone:PhoneApplicationPage">
+            <Setter Property="toolkit:TransitionService.NavigationInTransition">
+                <Setter.Value>
+                    <toolkit:NavigationInTransition>
+                        <toolkit:NavigationInTransition.Backward>
+                            <toolkit:TurnstileTransition Mode="BackwardIn"/>
+                        </toolkit:NavigationInTransition.Backward>
+                        <toolkit:NavigationInTransition.Forward>
+                            <toolkit:TurnstileTransition Mode="ForwardIn"/>
+                        </toolkit:NavigationInTransition.Forward>
+                    </toolkit:NavigationInTransition>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="toolkit:TransitionService.NavigationOutTransition">
+                <Setter.Value>
+                    <toolkit:NavigationOutTransition>
+                        <toolkit:NavigationOutTransition.Backward>
+                            <toolkit:TurnstileTransition Mode="BackwardOut"/>
+                        </toolkit:NavigationOutTransition.Backward>
+                        <toolkit:NavigationOutTransition.Forward>
+                            <toolkit:TurnstileTransition Mode="ForwardOut"/>
+                        </toolkit:NavigationOutTransition.Forward>
+                    </toolkit:NavigationOutTransition>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- 应用标题 -->
+        <sys:String x:Key="appTitle">开源中国</sys:String>
+        
+        <!-- 新的 -->
+        <Style x:Key="style_PanoramaItemTitle" TargetType="TextBlock" >
+            <Setter Property="FontSize" Value="40"  />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Margin" Value="0,0,0,0"/>
+        </Style>
+        
+        <Style x:Key="style_TypeList" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="50" />
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        <Style x:Key="style_ListFont" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        
+        <Style x:Key="style_Subtitle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="Foreground" Value="LightGray" />
+        </Style>
+
+        <Style x:Key="style_ImgButton" TargetType="Image">
+            <Setter Property="Width" Value="92" />
+            <Setter Property="Height" Value="92" />
+        </Style>
+        <Style x:Key="style_ButtonLogin" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="34" />
+        </Style>
+
+        <LinearGradientBrush x:Key="TitleBrush" StartPoint="0,1" EndPoint="1,0">
+            <LinearGradientBrush.GradientStops>
+                <GradientStop Offset="0" Color="Gray" />
+                <GradientStop Offset="1" Color="White" />
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+        
+        <Style x:Key="style_PivotTitle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="71"/>
+        </Style>
+        
+        <!-- 来自 nextapp -->
+        <Style x:Key="style_LoginText" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="28" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="style_CatalogTitleText" TargetType="TextBlock" >
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{StaticResource PhoneAccentBrush}" />
+            <Setter Property="FontSize" Value="36" />
+        </Style>
+
+        <Style x:Key="style_CatalogDescriptionText" TargetType="TextBlock" >
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+
+        <Style x:Key="style_CommentAuthorText" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="Foreground" Value="{StaticResource PhoneAccentBrush}" />
+        </Style>
+
+        <Style x:Key="style_TitleText" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Foreground" Value="{StaticResource PhoneAccentBrush}" />
+            <Setter Property="FontSize" Value="28" />
+        </Style>
+
+        <Style x:Key="style_DefaultText" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="28" />
+        </Style>
+
+        <Style x:Key="style_BodyText" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Foreground" Value="LightGray" />
+        </Style>
+
+        <Style x:Key="style_AuthorText" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+
+        <Style x:Key="style_DateText" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+
+        <Style x:Key="style_CommentText" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+
+        <Style x:Key="style_NoCommentTip" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="34" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="style_InputTip" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="style_BtnImgs" TargetType="Button">
+            <Setter Property="BorderBrush" Value="{StaticResource PhoneAccentBrush}" />
+            <Setter Property="Background" Value="{StaticResource  PhoneAccentBrush}" />
+        </Style>
+
+        <Style x:Key="style_PostDetialTitle" TargetType="TextBlock">
+            <Setter Property="Margin" Value="0,10,20,-24" />
+            <Setter Property="FontSize" Value="50" />
+            <Setter Property="Foreground" Value="Black" />
+        </Style>
+        <Style x:Key="style_MainPageTitle" TargetType="TextBlock">
+            <Setter Property="Margin" Value="0,10,20,-24" />
+            <Setter Property="FontSize" Value="50" />
+        </Style>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--处理应用程序的生存期事件所需的对象-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

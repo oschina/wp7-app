@@ -1,0 +1,66 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="OSChina.WordsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:MyControl="clr-namespace:OSChina.Controls"
+    xmlns:tileEffect="clr-namespace:WP7_ControlsLib.Controls;assembly=WP7_ControlsLib"
+    xmlns:c4f="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
+    tileEffect:TiltEffect.IsTiltEnabled="True"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Style="{StaticResource TransitionPageStyle}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="False">
+
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="template_Normal">
+            <StackPanel>
+                <c4f:ChatBubble ChatBubbleDirection="{Binding direction,Mode=OneTime}" Margin="{Binding border,Mode=OneTime}" Opacity="{Binding opactiy,Mode=OneTime}" Width="350">
+                    <c4f:ChatBubble.Content>
+                        <Grid Width="350">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{Binding content, Mode=OneTime}" Margin="0,0,31,12" HorizontalAlignment="Left" FontSize="22" Foreground="White" TextWrapping="Wrap" />
+                            <TextBlock Text="{Binding time,Mode=OneTime}" Grid.Row="1" HorizontalAlignment="Right" FontSize="18" Margin="0,0,31,0" Foreground="White" TextWrapping="Wrap" />
+                        </Grid>
+                    </c4f:ChatBubble.Content>
+                </c4f:ChatBubble>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Canvas Margin="0,0,0,120">
+            <Image Source="/Resource/Top/WordsTop.jpg" Width="480" Height="120" Canvas.Top="0" />
+            <Rectangle Width="480" Height="65" Fill="Black" Opacity="0.7" Canvas.Top="55"/>
+            <TextBlock x:Name="lblTitle" Text="" FontSize="40" Canvas.Left="10" Canvas.Top="60" Foreground="{StaticResource TitleBrush}"/>
+        </Canvas>
+        <!--ContentPanel - 在此处放置其他内容-->
+        <ListBox Name="list_Words" Height="646" Grid.Row="1" VerticalAlignment="Top" ItemTemplate="{StaticResource template_Normal}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel CacheMode="BitmapCache"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" Mode="Minimized" Opacity="0.75" IsMenuEnabled="False">
+            <shell:ApplicationBarIconButton x:Name="icon_Msg" IconUri="/Resource/MB_0002_mail_sent.png" Text="给 Ta 留言" Click="icon_Msg_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>
