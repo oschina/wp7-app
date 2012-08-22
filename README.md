@@ -16,7 +16,9 @@ wp7-app
 >PubTweetPage.g.i.cs
 
 将它们的类设置为派生自 WP7_ControlsLib. Controls. ProgressTrayPage<br/>
-例如 public partial class LoginPage : Microsoft.Phone.Controls.PhoneApplicationPage
+例如 public partial class LoginPage : Microsoft.Phone.Controls.PhoneApplicationPage 
+<br/>改为<br/>
+public partial class LoginPage : #####WP7_ControlsLib. Controls. ProgressTrayPage
 
 ####本项目采用 GPL 授权协议，欢迎大家在这个基础上进行改进，并与大家分享。
 
