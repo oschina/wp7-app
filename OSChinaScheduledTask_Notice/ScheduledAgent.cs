@@ -59,6 +59,11 @@ namespace OSChinaScheduledTask_Notice
             this. Process_GetNotice( cookie, uid );
         }
 
+        /// <summary>
+        /// 根据cookie以及uid 来获取 UserNotice
+        /// </summary>
+        /// <param name="cookie">cookie</param>
+        /// <param name="uid">用户uid</param>
         private void Process_GetNotice(string cookie, string uid)
         {
             WebClient client = new WebClient( );
