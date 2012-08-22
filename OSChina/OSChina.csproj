@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{912BF747-E875-485F-985B-8BBBB2CB2DAA}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OSChina</RootNamespace>
+    <AssemblyName>OSChina</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>OSChina.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>OSChina.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Coding4Fun.Phone.Controls, Version=1.5.6.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Coding4Fun.Phone.Controls.Toolkit, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Coding4Fun.Phone.Site.Controls, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>Lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.XPath, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="WatermarkedTextBoxControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="WP7_ControlsLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="WP7_JsonLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="WP7_UitlLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="WP7_WebLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivesPage.xaml.cs">
+      <DependentUpon>ActivesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App\Config.cs" />
+    <Compile Include="CommentsPage.xaml.cs">
+      <DependentUpon>CommentsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ActiveListControl.xaml.cs">
+      <DependentUpon>ActiveListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BlogListControl.xaml.cs">
+      <DependentUpon>BlogListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommentListControl.xaml.cs">
+      <DependentUpon>CommentListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FaceControl.xaml.cs">
+      <DependentUpon>FaceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FavListControl.xaml.cs">
+      <DependentUpon>FavListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FriendListControl.xaml.cs">
+      <DependentUpon>FriendListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoadNextTip.xaml.cs">
+      <DependentUpon>LoadNextTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MsgListControl.xaml.cs">
+      <DependentUpon>MsgListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewsListControl.xaml.cs">
+      <DependentUpon>NewsListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopUpImage.xaml.cs">
+      <DependentUpon>PopUpImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PostsListControl.xaml.cs">
+      <DependentUpon>PostsListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TweetListControl.xaml.cs">
+      <DependentUpon>TweetListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TweetPortal.xaml.cs">
+      <DependentUpon>TweetPortal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailPage2.xaml.cs">
+      <DependentUpon>DetailPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FavPage.xaml.cs">
+      <DependentUpon>FavPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackPage.xaml.cs">
+      <DependentUpon>FeedbackPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FriendPage.xaml.cs">
+      <DependentUpon>FriendPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\EventSingleton.cs" />
+    <Compile Include="Helper\ListBoxHelper.cs" />
+    <Compile Include="Helper\ScheduledUnit.cs" />
+    <Compile Include="Helper\Tool.cs" />
+    <Compile Include="LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ActiveUnit.cs" />
+    <Compile Include="Model\ApiResult.cs" />
+    <Compile Include="Model\AppOnly\ActiveType.cs" />
+    <Compile Include="Model\AppOnly\AppClientType.cs" />
+    <Compile Include="Model\AppOnly\CommentType.cs" />
+    <Compile Include="Model\AppOnly\DetailType.cs" />
+    <Compile Include="Model\AppOnly\FavType.cs" />
+    <Compile Include="Model\AppOnly\PostType.cs" />
+    <Compile Include="Model\AppOnly\TweetType.cs" />
+    <Compile Include="Model\BaseUnit.cs" />
+    <Compile Include="Model\BlogDetail.cs" />
+    <Compile Include="Model\BlogUnit.cs" />
+    <Compile Include="Model\CommentUnit.cs" />
+    <Compile Include="Model\FavUnit.cs" />
+    <Compile Include="Model\FriendUnit.cs" />
+    <Compile Include="Model\MyInfo.cs" />
+    <Compile Include="Model\NewsDetail.cs" />
+    <Compile Include="Model\NewsUnit.cs" />
+    <Compile Include="Model\PostDetail.cs" />
+    <Compile Include="Model\PostUnit.cs" />
+    <Compile Include="Model\SearchUnit.cs" />
+    <Compile Include="Model\SoftwareType.cs" />
+    <Compile Include="Model\SoftwareDetail.cs" />
+    <Compile Include="Model\SoftwareUnit.cs" />
+    <Compile Include="Model\TweetDetail.cs" />
+    <Compile Include="Model\TweetUnit.cs" />
+    <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="Model\UserNotice.cs" />
+    <Compile Include="Model\MsgUnit.cs" />
+    <Compile Include="MsgsPage.xaml.cs">
+      <DependentUpon>MsgsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostsPage.xaml.cs">
+      <DependentUpon>PostsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PubCommentPage.xaml.cs">
+      <DependentUpon>PubCommentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PubMsgPage.xaml.cs">
+      <DependentUpon>PubMsgPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PubPostPage.xaml.cs">
+      <DependentUpon>PubPostPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PubTweetPage.xaml.cs">
+      <DependentUpon>PubTweetPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TweetsPage.xaml.cs">
+      <DependentUpon>TweetsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage.xaml.cs">
+      <DependentUpon>UserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WordsPage.xaml.cs">
+      <DependentUpon>WordsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="ActivesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CommentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ActiveListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BlogListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CommentListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FaceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FavListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FriendListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\LoadNextTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MsgListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\NewsListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PopUpImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PostsListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TweetListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TweetPortal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailPage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FavPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FeedbackPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FriendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MsgsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PubCommentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PubMsgPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PubPostPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PubTweetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TweetsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WordsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Background.png" />
+    <Content Include="ApplicationIcon.png" />
+    <Content Include="Lib\Coding4Fun.Phone.Controls.dll" />
+    <Content Include="Lib\HtmlAgilityPack.dll" />
+    <Content Include="Lib\System.Xml.XPath.dll" />
+    <Content Include="Lib\WatermarkedTextBoxControl.dll" />
+    <Content Include="Lib\WP7_ControlsLib.dll" />
+    <Content Include="Lib\WP7_JsonLib.dll" />
+    <Content Include="Lib\WP7_UitlLib.dll" />
+    <Content Include="Lib\WP7_WebLib.dll" />
+    <Content Include="LICENSE.txt" />
+    <Content Include="Resource\at.png" />
+    <Content Include="Resource\900-800.png" />
+    <Content Include="Resource\appbar.browser.png" />
+    <Content Include="Resource\appbar.favs.addto.rest.png" />
+    <Content Include="Resource\appbar.feature.search.rest.png" />
+    <Content Include="Resource\appbar.questionmark.rest.png" />
+    <Content Include="Resource\appbar.refresh.rest.png" />
+    <Content Include="Resource\appbar_AddFavorite.png" />
+    <Content Include="Resource\appbar_publish_comment.png" />
+    <Content Include="Resource\avatar_noimg.jpg" />
+    <Content Include="Resource\bloglist.png" />
+    <Content Include="Resource\Exit.png" />
+    <Content Include="Resource\face\001%402x.png" />
+    <Content Include="Resource\face\002%402x.png" />
+    <Content Include="Resource\face\003%402x.png" />
+    <Content Include="Resource\face\004%402x.png" />
+    <Content Include="Resource\face\005%402x.png" />
+    <Content Include="Resource\face\006%402x.png" />
+    <Content Include="Resource\face\007%402x.png" />
+    <Content Include="Resource\face\008%402x.png" />
+    <Content Include="Resource\face\009%402x.png" />
+    <Content Include="Resource\face\010%402x.png" />
+    <Content Include="Resource\face\011%402x.png" />
+    <Content Include="Resource\face\012%402x.png" />
+    <Content Include="Resource\face\013%402x.png" />
+    <Content Include="Resource\face\014%402x.png" />
+    <Content Include="Resource\face\015%402x.png" />
+    <Content Include="Resource\face\016%402x.png" />
+    <Content Include="Resource\face\017%402x.png" />
+    <Content Include="Resource\face\018%402x.png" />
+    <Content Include="Resource\face\019%402x.png" />
+    <Content Include="Resource\face\020%402x.png" />
+    <Content Include="Resource\face\021%402x.png" />
+    <Content Include="Resource\face\022%402x.png" />
+    <Content Include="Resource\face\023%402x.png" />
+    <Content Include="Resource\face\024%402x.png" />
+    <Content Include="Resource\face\025%402x.png" />
+    <Content Include="Resource\face\026%402x.png" />
+    <Content Include="Resource\face\027%402x.png" />
+    <Content Include="Resource\face\028%402x.png" />
+    <Content Include="Resource\face\029%402x.png" />
+    <Content Include="Resource\face\030%402x.png" />
+    <Content Include="Resource\face\031%402x.png" />
+    <Content Include="Resource\face\032%402x.png" />
+    <Content Include="Resource\face\033%402x.png" />
+    <Content Include="Resource\face\034%402x.png" />
+    <Content Include="Resource\face\035%402x.png" />
+    <Content Include="Resource\face\036%402x.png" />
+    <Content Include="Resource\face\037%402x.png" />
+    <Content Include="Resource\face\038%402x.png" />
+    <Content Include="Resource\face\039%402x.png" />
+    <Content Include="Resource\face\040%402x.png" />
+    <Content Include="Resource\face\041%402x.png" />
+    <Content Include="Resource\face\042%402x.png" />
+    <Content Include="Resource\face\043%402x.png" />
+    <Content Include="Resource\face\044%402x.png" />
+    <Content Include="Resource\face\045%402x.png" />
+    <Content Include="Resource\face\046%402x.png" />
+    <Content Include="Resource\face\047%402x.png" />
+    <Content Include="Resource\face\048%402x.png" />
+    <Content Include="Resource\face\049%402x.png" />
+    <Content Include="Resource\face\050%402x.png" />
+    <Content Include="Resource\face\051%402x.png" />
+    <Content Include="Resource\face\052%402x.png" />
+    <Content Include="Resource\face\053%402x.png" />
+    <Content Include="Resource\face\054%402x.png" />
+    <Content Include="Resource\face\055%402x.png" />
+    <Content Include="Resource\face\056%402x.png" />
+    <Content Include="Resource\face\057%402x.png" />
+    <Content Include="Resource\face\058%402x.png" />
+    <Content Include="Resource\face\059%402x.png" />
+    <Content Include="Resource\face\060%402x.png" />
+    <Content Include="Resource\face\061%402x.png" />
+    <Content Include="Resource\face\062%402x.png" />
+    <Content Include="Resource\face\063%402x.png" />
+    <Content Include="Resource\face\064%402x.png" />
+    <Content Include="Resource\face\065%402x.png" />
+    <Content Include="Resource\face\067%402x.png" />
+    <Content Include="Resource\face\068%402x.png" />
+    <Content Include="Resource\face\069%402x.png" />
+    <Content Include="Resource\face\070%402x.png" />
+    <Content Include="Resource\face\071%402x.png" />
+    <Content Include="Resource\face\072%402x.png" />
+    <Content Include="Resource\face\073%402x.png" />
+    <Content Include="Resource\face\074%402x.png" />
+    <Content Include="Resource\face\075%402x.png" />
+    <Content Include="Resource\face\076%402x.png" />
+    <Content Include="Resource\face\077%402x.png" />
+    <Content Include="Resource\face\078%402x.png" />
+    <Content Include="Resource\face\079%402x.png" />
+    <Content Include="Resource\face\080%402x.png" />
+    <Content Include="Resource\face\081%402x.png" />
+    <Content Include="Resource\face\082%402x.png" />
+    <Content Include="Resource\face\083%402x.png" />
+    <Content Include="Resource\face\084%402x.png" />
+    <Content Include="Resource\face\085%402x.png" />
+    <Content Include="Resource\face\086%402x.png" />
+    <Content Include="Resource\face\087%402x.png" />
+    <Content Include="Resource\face\088%402x.png" />
+    <Content Include="Resource\face\089%402x.png" />
+    <Content Include="Resource\face\090%402x.png" />
+    <Content Include="Resource\face\091%402x.png" />
+    <Content Include="Resource\face\092%402x.png" />
+    <Content Include="Resource\face\093%402x.png" />
+    <Content Include="Resource\face\094%402x.png" />
+    <Content Include="Resource\face\095%402x.png" />
+    <Content Include="Resource\face\096%402x.png" />
+    <Content Include="Resource\face\097%402x.png" />
+    <Content Include="Resource\face\098%402x.png" />
+    <Content Include="Resource\face\100%402x.png" />
+    <Content Include="Resource\face\101%402x.png" />
+    <Content Include="Resource\face\103%402x.png" />
+    <Content Include="Resource\face\104%402x.png" />
+    <Content Include="Resource\face\105%402x.png" />
+    <Content Include="Resource\face\099%402x.png" />
+    <Content Include="Resource\favorite.png" />
+    <Content Include="Resource\friends.png" />
+    <Content Include="Resource\goodslist.png" />
+    <Content Include="Resource\ifanr_favs_remove.png" />
+    <Content Include="Resource\Login.png" />
+    <Content Include="Resource\man.png" />
+    <Content Include="Resource\MB_0002_mail_sent.png" />
+    <Content Include="Resource\MB_0013_msg2.png" />
+    <Content Include="Resource\MB_0014_msg3.png" />
+    <Content Include="Resource\MB_0023_home2.png" />
+    <Content Include="Resource\minus.png" />
+    <Content Include="Resource\Msg\MsgTop3.jpg" />
+    <Content Include="Resource\MyInfo.png" />
+    <Content Include="Resource\newslist.png" />
+    <Content Include="Resource\osc.png" />
+    <Content Include="Resource\plus.png" />
+    <Content Include="Resource\Positive.png" />
+    <Content Include="Resource\PostIcon\1.jpg" />
+    <Content Include="Resource\PostIcon\2.jpg" />
+    <Content Include="Resource\PostIcon\3.jpg" />
+    <Content Include="Resource\PostIcon\4.jpg" />
+    <Content Include="Resource\PostIcon\5.jpg" />
+    <Content Include="Resource\PostIcon\appbar_face.png" />
+    <Content Include="Resource\PostIcon\appbar_keyboard.png" />
+    <Content Include="Resource\PostIcon\IconCamera.png" />
+    <Content Include="Resource\PostIcon\IconCheck.png" />
+    <Content Include="Resource\PostIcon\IconPic.png" />
+    <Content Include="Resource\pushpin.png" />
+    <Content Include="Resource\big_avatar.png" />
+    <Content Include="Resource\ToastIcon.png" />
+    <Content Include="Resource\Top\ActiveTop.jpg" />
+    <Content Include="Resource\Top\AnswerTop.jpg" />
+    <Content Include="Resource\Top\FavTop.jpg" />
+    <Content Include="Resource\Top\FriendTop.jpg" />
+    <Content Include="Resource\Top\MsgTop.jpg" />
+    <Content Include="Resource\Top\TweetsTop.jpg" />
+    <Content Include="Resource\Top\WordsTop.jpg" />
+    <Content Include="Resource\woman.png" />
+    <Content Include="Resource\woman1.png" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Lib\Coding4Fun.Phone.Controls.Toolkit.dll" />
+    <Content Include="Lib\Coding4Fun.Phone.Site.Controls.dll" />
+    <Content Include="Lib\Microsoft.Phone.Controls.dll" />
+    <Content Include="Lib\Microsoft.Phone.Controls.Toolkit.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OSChinaScheduledTask_Notice\OSChinaScheduledTask_Notice.csproj">
+      <Project>{BF2822EA-8C13-4199-A7B4-6695F0B60BD1}</Project>
+      <Name>OSChinaScheduledTask_Notice</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

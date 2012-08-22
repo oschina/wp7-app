@@ -1,0 +1,237 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="OSChina.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:Code4Fun="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
+    xmlns:Code4FunBinding="clr-namespace:Coding4Fun.Phone.Controls.Binding;assembly=Coding4Fun.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:water="clr-namespace:WatermarkedTextBoxControl;assembly=WatermarkedTextBoxControl"
+    xmlns:tileEffect="clr-namespace:WP7_ControlsLib.Controls;assembly=WP7_ControlsLib"
+    tileEffect:TiltEffect.IsTiltEnabled="True"
+    xmlns:MyControl="clr-namespace:OSChina.Controls"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800" 
+    FontFamily="{StaticResource PhoneFontFamilyNormal}" 
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Style="{StaticResource TransitionPageStyle}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+    <phone:PhoneApplicationPage.Resources>
+        <Storyboard 
+            x:Name="trexStoryboard" 
+            AutoReverse="True" 
+            RepeatBehavior="Forever"  >
+            <DoubleAnimationUsingKeyFrames 
+				Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+				Storyboard.TargetName="image">
+                <SplineDoubleKeyFrame KeyTime="0:0:1"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:18" Value="-126"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:19" Value="-126" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </phone:PhoneApplicationPage.Resources>
+
+        <controls:Panorama Name="panorama" SelectionChanged="panorama_SelectionChanged">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="/Resource/900-800.png" />
+            </controls:Panorama.Background>
+            <controls:Panorama.Title>
+                <TextBlock Margin="0,85,0,-8" FontFamily="Microsoft MHei"  VerticalAlignment="Bottom"  Text="OSChina 开源中国" FontSize="78" FontWeight="ExtraBold">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStop Offset="0.0" Color="Gray" />
+                                <GradientStop Offset="0.33" Color="White" />
+                                <GradientStop Offset="0.67" Color="Gray" />
+                                <GradientStop Offset="1.0" Color="White" />
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </controls:Panorama.Title>
+            
+
+            <controls:PanoramaItem x:Name="newsItem">
+                <controls:PanoramaItem.Header>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="lblTitleNews" Text="资讯" Style="{StaticResource style_PanoramaItemTitle}" Foreground="{StaticResource TitleBrush}"  />
+                    <Code4Fun:RoundButton Name="btnNews" Click="btnNews_Click" BorderBrush="White" Margin="100,7,0,-10" Background="{StaticResource PhoneAccentBrush}" ImageSource="Resource/newslist.png" FontSize="16" Content="资讯" Foreground="White">
+                        <Code4Fun:RoundButton.RenderTransform>
+                            <ScaleTransform ScaleX="0.8" ScaleY="0.8" />
+                        </Code4Fun:RoundButton.RenderTransform>
+                    </Code4Fun:RoundButton>
+                    <Code4Fun:RoundButton Name="btnBlogs" Click="btnNews_Click" BorderBrush="White"  Margin="8,7,0,-10"  FontSize="16" ImageSource="Resource/bloglist.png" Content="博客" Foreground="White">
+                        <Code4Fun:RoundButton.RenderTransform>
+                            <ScaleTransform ScaleX="0.8" ScaleY="0.8" />
+                        </Code4Fun:RoundButton.RenderTransform>
+                    </Code4Fun:RoundButton>
+                    <Code4Fun:RoundButton Name="btnHotBlogs" Click="btnNews_Click" BorderBrush="White"  Margin="8,7,0,-10"  FontSize="16" ImageSource="Resource/goodslist.png" Content="推荐" Foreground="White">
+                        <Code4Fun:RoundButton.RenderTransform>
+                            <ScaleTransform ScaleX="0.8" ScaleY="0.8" />
+                        </Code4Fun:RoundButton.RenderTransform>
+                    </Code4Fun:RoundButton>
+                </StackPanel>
+                    
+                </controls:PanoramaItem.Header>
+                <Grid>
+                    <MyControl:NewsListControl x:Name="newsList"/>
+                </Grid>
+            </controls:PanoramaItem>
+ 
+            <controls:PanoramaItem x:Name="postsItem">
+                <controls:PanoramaItem.Header>
+                <TextBlock Text="问答" Style="{StaticResource style_PanoramaItemTitle}" Height="48" Foreground="{StaticResource TitleBrush}"  />
+                </controls:PanoramaItem.Header>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel>
+                    <toolkit:HubTile x:Name="btnPost1"  Source="/Resource/PostIcon/1.jpg"  Title="技术问答" Message="最热门的技术问答" Tap="btnPost1_Click" Margin="6,0,6,6" />
+                        <toolkit:HubTile x:Name="btnPost2"  Source="/Resource/PostIcon/2.jpg" Title="技术分享" Message="秀秀好的分享" Tap="btnPost1_Click" Margin="6,6,6,6"/>
+                        <toolkit:HubTile x:Name="btnPost5"  Source="/Resource/PostIcon/5.jpg" Title="站务建议" Message="来讨论OSC的发展" Tap="btnPost1_Click" Margin="6,6,6,6"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <toolkit:HubTile x:Name="btnPost4"  Source="/Resource/PostIcon/4.jpg" Title="职业生涯" Message="天马行空的灌水区" Tap="btnPost1_Click" Margin="6,0,6,6"/>
+                        <toolkit:HubTile x:Name="btnPost3"  Source="/Resource/PostIcon/3.jpg" Title="大杂烩" Message="IT界大杂烩" Tap="btnPost1_Click" Margin="6"/>
+                </StackPanel>
+                </StackPanel>
+            </controls:PanoramaItem>
+            
+            <controls:PanoramaItem x:Name="tweetsItem">
+                <controls:PanoramaItem.Header>
+                <TextBlock Text="动弹" Style="{StaticResource style_PanoramaItemTitle}" Height="48" Foreground="{StaticResource TitleBrush}"  />
+                </controls:PanoramaItem.Header>
+            <StackPanel >
+                <!--<Canvas Margin="0,0,0,12" HorizontalAlignment="Left" >-->
+                <Grid Margin="0,0,0,12" HorizontalAlignment="Left" >
+                    <MyControl:TweetPortal x:Name="tweetPortal_Latest" Type="Latest" Tap="tweetPortal_Latest_MouseLeftButtonUp" />
+                    <Code4Fun:TileNotification Margin="320,8,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black">
+                        <TextBlock Foreground="White"  FontSize="18"  Text="最新" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Code4Fun:TileNotification>
+                </Grid>
+                <Grid  HorizontalAlignment="Left" >
+                    <MyControl:TweetPortal x:Name="tweetPortal_Hottest" Type="Hottest" Tap="tweetPortal_Latest_MouseLeftButtonUp"  />
+                    <Code4Fun:TileNotification Margin="320,8,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black">
+                        <TextBlock Foreground="White"  FontSize="18"  Text="热门" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Code4Fun:TileNotification>
+                </Grid>
+                <toolkit:HubTile x:Name="tweetPortal_My"  
+                                 Title="我的动弹" Message="查看我的所有动弹" HorizontalAlignment="Left" 
+                                 Tap="tweetPortal_Latest_MouseLeftButtonUp" Margin="0,12,0,0"/>
+            </StackPanel>
+        </controls:PanoramaItem>
+
+            <controls:PanoramaItem x:Name="activeItem" >
+                <controls:PanoramaItem.Header>
+                <TextBlock Text="我的" Style="{StaticResource style_PanoramaItemTitle}" Height="48"  Foreground="{StaticResource TitleBrush}" />
+                </controls:PanoramaItem.Header>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Code4Fun:Tile x:Name="btnActive_1" Margin="6,0,6,6" Title="朋友都在干什么" Foreground="White"   Click="btnActive_1_Click" Width="173" Height="173">
+                            <Grid Background="Orange">
+                                <TextBlock Text="所有" FontSize="65" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" />
+                            </Grid>
+                        </Code4Fun:Tile>
+                    <Code4Fun:Tile x:Name="btnActive_2" Margin="6,0,6,6" Title="提到我" Foreground="White"  Click="btnActive_1_Click" Width="173" Height="173">
+                            <Grid Background="CornflowerBlue">
+                            <TextBlock Text="@我" FontSize="65" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" />
+                            <Code4Fun:TileNotification x:Name="notice_AtMe" Foreground="White" Background="Black" />
+                            </Grid>
+                        </Code4Fun:Tile>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                    <Code4Fun:Tile x:Name="btnActive_3" Margin="6" Title="所有对我的评论" Foreground="White"  Click="btnActive_1_Click" Width="173" Height="173">
+                            <Grid Background="Plum">
+                            <TextBlock Text="评论" FontSize="65" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" />
+                            <Code4Fun:TileNotification x:Name="notice_Review"  Foreground="White" Background="Black" />
+                            </Grid>
+                        </Code4Fun:Tile>
+                    <Code4Fun:Tile x:Name="btnActive_4" Margin="6" Title="我在OSC的动态" Foreground="White"  Click="btnActive_1_Click" Width="173" Height="173">
+                            <Grid Background="YellowGreen">
+                            <TextBlock Text="自己" FontSize="65" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" />
+                            </Grid>
+                        </Code4Fun:Tile>
+                    </StackPanel>
+                <Code4Fun:Tile 
+                        HorizontalAlignment="Left"
+                        Margin="6" Width="358" Height="173" 
+                        Code4FunBinding:FrameworkElementBinding.ClipToBounds="True"
+                        Click="btnPostMsg_Click"  
+                        Title="留言" Foreground="White">
+                    <Grid>
+                        <Canvas>
+                            <Image 
+					                x:Name="image" 
+	        		                Source="/Resource/Msg/MsgTop3.jpg" 
+	        		                Stretch="None">
+                                <Image.RenderTransform>
+                                    <CompositeTransform />
+                                </Image.RenderTransform>
+                            </Image>
+                        </Canvas>
+                        <!--<Code4Fun:TileNotification
+                                Padding="18, 0"
+                                Background="{StaticResource PhoneAccentBrush}">
+                            <TextBlock>rawr?</TextBlock>
+                        </Code4Fun:TileNotification>-->
+                        <Code4Fun:TileNotification x:Name="notice_Msg" Padding="18, 0" Content="无未读消息" Background="#f0e68c">
+                        </Code4Fun:TileNotification>
+                    </Grid>
+                </Code4Fun:Tile>
+            </StackPanel>
+            </controls:PanoramaItem>
+            
+            <controls:PanoramaItem x:Name="moreItem" Margin="0,0,0,0">
+                <controls:PanoramaItem.Header>
+                    <TextBlock Text="更多" Style="{StaticResource style_PanoramaItemTitle}" Foreground="{StaticResource TitleBrush}" />
+                </controls:PanoramaItem.Header>
+                <StackPanel>
+                <StackPanel Name="panel4Login">
+                    <StackPanel Name="panelFavorite" Orientation="Horizontal" Tap="btnFavorite_Click">
+                        <Image Source="/Resource/favorite.png" Style="{StaticResource style_ImgButton}" />
+                        <TextBlock Text="我的收藏" Style="{StaticResource style_ButtonLogin}" Foreground="YellowGreen" />
+                    </StackPanel>
+                    <StackPanel Name="panelFans" Orientation="Horizontal" Tap="btnFans_Click">
+                        <Image Source="/Resource/Positive.png" Style="{StaticResource style_ImgButton}" />
+                        <TextBlock Text="我的粉丝" Style="{StaticResource style_ButtonLogin}" Foreground="CornflowerBlue" />
+                    </StackPanel>
+                    <StackPanel Name="panelFollow" Orientation="Horizontal" Tap="btnFollow_Click">
+                        <Image Source="/Resource/friends.png" Style="{StaticResource style_ImgButton}" />
+                        <TextBlock Text="我关注的" Style="{StaticResource style_ButtonLogin}" Foreground="Orange" />
+                    </StackPanel>
+                    <StackPanel Name="panelLogout" Orientation="Horizontal" Tap="panelLogout_MouseLeftButtonUp">
+                        <Image Source="/Resource/Exit.png" Style="{StaticResource style_ImgButton}" />
+                        <TextBlock Text="注销账户" Style="{StaticResource style_ButtonLogin}" Foreground="Plum" />
+                    </StackPanel>
+                </StackPanel>
+                    <StackPanel Name="panel4Logout">
+                    <StackPanel Name="panelLogin" Orientation="Horizontal" Tap="panelLogin_MouseLeftButtonUp">
+                        <Image Source="/Resource/Login.png" Style="{StaticResource style_ImgButton}" />
+                        <TextBlock Text="登录" Style="{StaticResource style_ButtonLogin}" Foreground="White" />
+                    </StackPanel>
+                    <!--讲解如何注册账号的地方-->
+                    <StackPanel />
+                </StackPanel>
+                <StackPanel Name="panelAbout" Orientation="Horizontal" Tap="btnAboutUs_Click">
+                    <Image Source="/Resource/osc.png" Style="{StaticResource style_ImgButton}"  />
+                    <TextBlock Text="关于我们" Style="{StaticResource style_ButtonLogin}" Foreground="White"  />
+                </StackPanel>
+            </StackPanel>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" Mode="Default"  BackgroundColor="Black" ForegroundColor="White">
+            <shell:ApplicationBarIconButton x:Name="icon_Refresh1" IconUri="/Resource/appbar.refresh.rest.png" Text="刷新" Click="icon_Refresh1_Click" />
+            <shell:ApplicationBarIconButton x:Name="icon_Post" IconUri="/Resource/appbar.questionmark.rest.png" Text="提问" Click="icon_Post_Click" />
+            <shell:ApplicationBarIconButton x:Name="icon_Search" IconUri="/Resource/appbar.feature.search.rest.png" Text="搜索" Click="icon_Search_Click" />
+            <shell:ApplicationBarIconButton x:Name="icon_Tweet" IconUri="/Resource/MB_0014_msg3.png" Text="动弹一下" Click="icon_Tweet_Click"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="menu_Setting" Text="应用设置" Click="menu_Setting_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

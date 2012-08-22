@@ -1,0 +1,389 @@
+﻿<UserControl x:Class="OSChina.Controls.FaceControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+             xmlns:My="clr-namespace:OSChina.Controls"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    
+    <UserControl.Resources>
+        <Style x:Key="style_SP" TargetType="StackPanel">
+            <Setter Property="Width" Value="63" />
+            <Setter Property="Height" Value="63" />
+            <Setter Property="Background" Value="#4A494A" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="2,2,0,0" />
+        </Style>
+        <Style x:Key="style_Img" TargetType="Image">
+            <Setter Property="Width" Value="32" />
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Margin" Value="0,18" />
+        </Style>
+    </UserControl.Resources>
+    
+    <ScrollViewer Height="330" >
+    <Grid x:Name="LayoutRoot" HorizontalAlignment="Center" Background="#212021">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+             </Grid.RowDefinitions>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="0" Margin="10,0,10,0">
+                <StackPanel Tag="[0]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/001@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[1]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/002@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[2]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/003@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[3]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/004@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[4]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/005@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[5]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/006@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[6]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/007@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="1" Margin="10,0,10,0">
+                <StackPanel Tag="[7]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/008@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[8]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/009@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[9]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/010@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[10]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/011@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[11]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/012@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[12]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/013@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[13]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/014@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="2" Margin="10,0,10,0">
+                <StackPanel Tag="[14]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/015@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[15]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/016@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[16]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/017@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[17]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/018@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[18]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/019@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[19]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/020@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[20]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/021@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="3" Margin="10,0,10,0">
+                <StackPanel Tag="[21]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/022@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[22]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/023@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[23]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/024@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[24]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/025@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[25]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/026@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[26]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/027@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[27]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/028@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="4" Margin="10,0,10,0">
+                <StackPanel Tag="[28]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/029@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[29]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/030@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[30]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/031@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[31]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/032@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[32]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/033@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[33]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/034@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[34]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/035@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="5" Margin="10,0,10,0">
+                <StackPanel Tag="[35]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/036@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[36]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/037@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[37]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/038@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[38]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/039@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[39]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/040@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[40]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/041@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[41]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/042@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="6" Margin="10,0,10,0">
+                <StackPanel Tag="[42]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/043@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[43]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/044@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[44]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/045@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[45]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/046@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[46]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/047@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[47]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/048@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[48]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/049@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="7" Margin="10,0,10,0">
+                <StackPanel Tag="[49]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/050@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[50]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/051@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[51]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/052@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[52]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/053@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[53]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/054@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[54]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/055@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[55]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/056@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="8" Margin="10,0,10,0">
+                <StackPanel Tag="[56]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/057@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[57]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/058@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[58]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/059@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[59]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/060@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[60]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/061@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[61]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/062@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[62]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/063@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="9" Margin="10,0,10,0">
+                <StackPanel Tag="[63]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/064@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[64]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/065@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[66]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/067@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[67]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/068@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[68]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/069@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[69]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/070@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[70]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/071@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="10" Margin="10,0,10,0">
+                <StackPanel Tag="[71]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/072@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[72]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/073@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[73]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/074@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[74]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/075@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[75]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/076@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[76]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/077@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[77]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/078@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="11" Margin="10,0,10,0">
+                <StackPanel Tag="[78]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/079@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[79]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/080@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[80]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/081@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[81]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/082@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[82]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/083@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[83]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/084@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[84]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/085@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="12" Margin="10,0,10,0">
+                <StackPanel Tag="[85]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/086@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[86]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/087@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[87]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/088@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[88]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/089@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[89]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/090@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[90]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/091@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[91]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/092@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="13" Margin="10,0,10,0">
+                <StackPanel Tag="[92]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/093@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[93]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/094@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[94]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/095@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[95]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/096@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[96]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/097@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[97]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/098@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[98]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/099@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="14" Margin="10,0,10,0">
+                <StackPanel Tag="[99]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/100@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[100]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted" >
+                    <Image Source="/Resource/face/101@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[102]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/103@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[103]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/104@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+                <StackPanel Tag="[104]" Style="{StaticResource style_SP}" Tap="StackPanel_Tap" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown" ManipulationCompleted="StackPanel_ManipulationCompleted">
+                    <Image Source="/Resource/face/105@2x.png" Style="{StaticResource style_Img}" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

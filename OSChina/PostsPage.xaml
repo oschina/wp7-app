@@ -1,0 +1,46 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="OSChina.PostsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:control="clr-namespace:OSChina.Controls"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+      xmlns:tileEffect="clr-namespace:WP7_ControlsLib.Controls;assembly=WP7_ControlsLib"
+    tileEffect:TiltEffect.IsTiltEnabled="True"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Style="{StaticResource TransitionPageStyle}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <Canvas Margin="0,0,0,120" Grid.Row="0" >
+            <Image Source="/Resource/Top/AnswerTop.jpg" Width="480" Height="120" Canvas.Top="0" />
+            <Rectangle Width="480" Height="65" Fill="Black" Opacity="0.7" Canvas.Top="55"/>
+            <TextBlock x:Name="lblTitle" Text="问答" FontSize="40" Canvas.Left="10" Canvas.Top="60"  Foreground="{StaticResource TitleBrush}"/>
+        </Canvas>
+
+        <control:PostsListControl x:Name="postsControl" Grid.Row="1" VerticalAlignment="Top" Height="650" Margin="4,0,0,0" />
+    </Grid>
+ 
+    <!--演示 ApplicationBar 用法的示例代码-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" Mode="Minimized" Opacity="0.75" IsMenuEnabled="False">
+            <shell:ApplicationBarIconButton x:Name="icon_Back" IconUri="/Resource/MB_0023_home2.png" Text="首页" Click="icon_Back_Click"/>
+            <shell:ApplicationBarIconButton x:Name="icon_Refresh" IconUri="/Resource/appbar.refresh.rest.png" Text="刷新" Click="icon_Refresh_Click"/>
+            <shell:ApplicationBarIconButton x:Name="icon_Post" IconUri="/Resource/appbar.questionmark.rest.png" Text="提问" Click="icon_Post_Click" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
