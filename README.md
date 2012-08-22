@@ -6,9 +6,13 @@ wp7-app
 如果出现编译错误，请修改 OSChina\obj\Release 目录下的如下文件
 
 >LoginPage.g.i.cs
+>
 >PubCommentPage.g.i.cs
+>
 >PubMsgPage.g.i.cs
+>
 >PubPostPage.g.i.cs
+>
 >PubTweetPage.g.i.cs
 
 将它们的类设置为派生自 WP7_ControlsLib. Controls. ProgressTrayPage
