@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * 原作者: 王俊
+ * 联系qq: 113020930
+ */
+using System;
 using System. Text;
 using System. Windows. Media. Imaging;
 using Coding4Fun. Phone. Controls;

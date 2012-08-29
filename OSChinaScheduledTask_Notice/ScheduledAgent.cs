@@ -1,11 +1,14 @@
-﻿using System. Windows;
-using Microsoft. Phone. Scheduler;
-using Microsoft. Phone. Shell;
+﻿using System;
 using System. Linq;
 using System. Net;
-using WP7_JsonLib;
+/*
+ * 原作者: 王俊
+ * 联系qq: 113020930
+ */
+using System. Windows;
 using System. Xml. Linq;
-using System;
+using Microsoft. Phone. Scheduler;
+using Microsoft. Phone. Shell;
 
 namespace OSChinaScheduledTask_Notice
 {

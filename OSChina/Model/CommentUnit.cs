@@ -1,4 +1,8 @@
-﻿using System. Windows;
+﻿/*
+ * 原作者: 王俊
+ * 联系qq: 113020930
+ */
+using System. Windows;
 using Coding4Fun. Phone. Controls;
 
 namespace OSChina. Model

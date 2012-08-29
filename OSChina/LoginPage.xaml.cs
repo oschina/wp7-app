@@ -1,4 +1,8 @@
-﻿using System. Collections. Generic;
+﻿/*
+ * 原作者: 王俊
+ * 联系qq: 113020930
+ */
+using System. Collections. Generic;
 using System. Windows;
 using OSChina. Model;
 using WP7_WebLib. HttpPost;

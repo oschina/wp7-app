@@ -1,4 +1,8 @@
-﻿using System. Windows. Controls;
+﻿/*
+ * 原作者: 王俊
+ * 联系qq: 113020930
+ */
+using System. Windows. Controls;
 using System. Windows. Input;
 using System. Windows. Media;
 

@@ -1,4 +1,8 @@
-﻿namespace OSChina. Model
+﻿/*
+ * 原作者: 王俊
+ * 联系qq: 113020930
+ */
+namespace OSChina. Model
 {
     /// <summary>
     /// 动态列表单元
