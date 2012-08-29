@@ -58,45 +58,45 @@ namespace OSChina
         public const string api_userblog_delete = "http://www.oschina.net/action/api/userblog_delete";
         public const string api_blog_list = "http://www.oschina.net/action/api/blog_list";
 #elif local
-        public const string api_news_list = "http://192.168.1.88/action/api/news_list";
-        public const string api_news_detail = "http://192.168.1.88/action/api/news_detail";
-        public const string api_software_detail = "http://192.168.1.88/action/api/software_detail";
-        public const string api_blog_detail = "http://192.168.1.88/action/api/blog_detail";
-        public const string api_post_list = "http://192.168.1.88/action/api/post_list";
-        public const string api_post_detail = "http://192.168.1.88/action/api/post_detail";
-        public const string api_post_pub = "http://192.168.1.88/action/api/post_pub";
-        public const string api_tweet_list = "http://192.168.1.88/action/api/tweet_list";
-        public const string api_tweet_detail = "http://192.168.1.88/action/api/tweet_detail";
-        public const string api_tweet_pub = "http://192.168.1.88/action/api/tweet_pub";
-        public const string api_tweet_delete = "http://192.168.1.88/action/api/tweet_delete";
-        public const string api_active_list = "http://192.168.1.88/action/api/active_list";
-        public const string api_msg_list = "http://192.168.1.88/action/api/message_list";
-        public const string api_msg_delete = "http://192.168.1.88/action/api/message_delete";
-        public const string api_msg_pub = "http://192.168.1.88/action/api/message_pub";
-        public const string api_comment_list = "http://192.168.1.88/action/api/comment_list";
-        public const string api_comment_pub = "http://192.168.1.88/action/api/comment_pub";
-        public const string api_comment_reply = "http://192.168.1.88/action/api/comment_reply";
-        public const string api_comment_delete = "http://192.168.1.88/action/api/comment_delete";
-        public const string api_login_validate = "http://192.168.1.88/action/api/login_validate";
-        public const string api_user_info = "http://192.168.1.88/action/api/user_information";
-        public const string api_user_updaterelation = "http://192.168.1.88/action/api/user_updaterelation";
-        public const string api_notice_clear = "http://192.168.1.88/action/api/notice_clear";
-        public const string api_fav_list = "http://192.168.1.88/action/api/favorite_list";
-        public const string api_fav_add = "http://192.168.1.88/action/api/favorite_add";
-        public const string api_fav_delete = "http://192.168.1.88/action/api/favorite_delete";
-        public const string api_user_notice = "http://192.168.1.88/action/api/user_notice";
-        public const string api_search_list = "http://192.168.1.88/action/api/search_list";
-        public const string api_friends_list = "http://192.168.1.88/action/api/friends_list";
-        public const string api_softwarecatalog_list = "http://192.168.1.88/action/api/softwarecatalog_list";
-        public const string api_softwaretag_list = "http://192.168.1.88/action/api/softwaretag_list";
-        public const string api_software_list = "http://192.168.1.88/action/api/software_list";
-        public const string api_blogcomment_list = "http://192.168.1.88/action/api/blogcomment_list";
-        public const string api_blogcomment_pub = "http://192.168.1.88/action/api/blogcomment_pub";
-        public const string api_blogcomment_delete = "http://192.168.1.88/action/api/blogcomment_delete";
-        public const string api_my_info = "http://192.168.1.88/action/api/my_information";
-        public const string api_userblog_list = "http://192.168.1.88/action/api/userblog_list";
-        public const string api_userblog_delete = "http://192.168.1.88/action/api/userblog_delete";
-        public const string api_blog_list = "http://192.168.1.88/action/api/blog_list";
+        public const string api_news_list = "http://192.168.1.213/action/api/news_list";
+        public const string api_news_detail = "http://192.168.1.213/action/api/news_detail";
+        public const string api_software_detail = "http://192.168.1.213/action/api/software_detail";
+        public const string api_blog_detail = "http://192.168.1.213/action/api/blog_detail";
+        public const string api_post_list = "http://192.168.1.213/action/api/post_list";
+        public const string api_post_detail = "http://192.168.1.213/action/api/post_detail";
+        public const string api_post_pub = "http://192.168.1.213/action/api/post_pub";
+        public const string api_tweet_list = "http://192.168.1.213/action/api/tweet_list";
+        public const string api_tweet_detail = "http://192.168.1.213/action/api/tweet_detail";
+        public const string api_tweet_pub = "http://192.168.1.213/action/api/tweet_pub";
+        public const string api_tweet_delete = "http://192.168.1.213/action/api/tweet_delete";
+        public const string api_active_list = "http://192.168.1.213/action/api/active_list";
+        public const string api_msg_list = "http://192.168.1.213/action/api/message_list";
+        public const string api_msg_delete = "http://192.168.1.213/action/api/message_delete";
+        public const string api_msg_pub = "http://192.168.1.213/action/api/message_pub";
+        public const string api_comment_list = "http://192.168.1.213/action/api/comment_list";
+        public const string api_comment_pub = "http://192.168.1.213/action/api/comment_pub";
+        public const string api_comment_reply = "http://192.168.1.213/action/api/comment_reply";
+        public const string api_comment_delete = "http://192.168.1.213/action/api/comment_delete";
+        public const string api_login_validate = "http://192.168.1.213/action/api/login_validate";
+        public const string api_user_info = "http://192.168.1.213/action/api/user_information";
+        public const string api_user_updaterelation = "http://192.168.1.213/action/api/user_updaterelation";
+        public const string api_notice_clear = "http://192.168.1.213/action/api/notice_clear";
+        public const string api_fav_list = "http://192.168.1.213/action/api/favorite_list";
+        public const string api_fav_add = "http://192.168.1.213/action/api/favorite_add";
+        public const string api_fav_delete = "http://192.168.1.213/action/api/favorite_delete";
+        public const string api_user_notice = "http://192.168.1.213/action/api/user_notice";
+        public const string api_search_list = "http://192.168.1.213/action/api/search_list";
+        public const string api_friends_list = "http://192.168.1.213/action/api/friends_list";
+        public const string api_softwarecatalog_list = "http://192.168.1.213/action/api/softwarecatalog_list";
+        public const string api_softwaretag_list = "http://192.168.1.213/action/api/softwaretag_list";
+        public const string api_software_list = "http://192.168.1.213/action/api/software_list";
+        public const string api_blogcomment_list = "http://192.168.1.213/action/api/blogcomment_list";
+        public const string api_blogcomment_pub = "http://192.168.1.213/action/api/blogcomment_pub";
+        public const string api_blogcomment_delete = "http://192.168.1.213/action/api/blogcomment_delete";
+        public const string api_my_info = "http://192.168.1.213/action/api/my_information";
+        public const string api_userblog_list = "http://192.168.1.213/action/api/userblog_list";
+        public const string api_userblog_delete = "http://192.168.1.213/action/api/userblog_delete";
+        public const string api_blog_list = "http://192.168.1.213/action/api/blog_list";
 #endif
         #endregion
 
@@ -543,7 +543,7 @@ namespace OSChina
         /// <summary>
         /// HTML组装字符串的 头部
         /// </summary>
-        public const string HTML_Style = "<style>#oschina_title {color: #000000; margin: 20px 0px 10px 6px; font-weight:bold;font-size:20px;}#oschina_title img{vertical-align:middle;margin-right:6px;}#oschina_title a{color:#0D6DA8;}#oschina_outline {color: #707070; padding:0 0 12px 10px; font-size: 16px;line-height:30px}#oschina_outline a{color:#0D6DA8;}#oschina_software{color:#808080;font-size:14px}#oschina_body img {max-width: 480px;}#oschina_body {font-size:18px;max-width:300px;line-height:28px;} #oschina_body table{max-width:300px;}#oschina_body pre { font-size:34pt;font-family:Courier New,Arial;border:1px solid #ddd;border-left:10px solid #6CE26C;background:#f6f6f6;padding:20px;line-height:42px}</style>";
+        public const string HTML_Style = "<style>#oschina_title {color: #000000; margin: 20px 0px 10px 6px; font-weight:bold;font-size:20px;}#oschina_title img{vertical-align:middle;margin-right:6px;}#oschina_title a{color:#0D6DA8;}#oschina_outline {color: #707070; padding:0 0 12px 10px; font-size: 16px;line-height:30px}#oschina_outline a{color:#0D6DA8;}#oschina_software{color:#808080;font-size:14px}#oschina_body img {max-width: 480px;}#oschina_body {font-size:18px;max-width:300px;line-height:28px;} #oschina_body table{max-width:300px;}#oschina_body pre { font-size:34pt;font-family:Courier New,Arial;border:1px solid #ddd;border-left:10px solid #6CE26C;background:#f6f6f6;padding:20px;line-height:42px;}</style>";
 
         /// <summary>
         /// HTML组装字符串的 尾部

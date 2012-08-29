@@ -36,6 +36,10 @@ namespace OSChina
             //点击网页链接的处理
             this. browser. Navigating += new EventHandler<NavigatingEventArgs>( (s, e) =>
                 {
+                    if ( e.Uri.AbsoluteUri.StartsWith("http://www.oschina.net/search?scope=bbs&q=", StringComparison.CurrentCulture) )
+                    {
+                        return;
+                    }
                     switch ( e. Uri. AbsoluteUri )
                     {
                         case "http://www.wangjuntom.com/":

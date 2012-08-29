@@ -1345,9 +1345,20 @@ namespace OSChina
                                                   return;
                                               }
 	                                    }
-                                        else if (array.Length ==  4)
+                                        else if (array.Length >=  4)
 	                                    {
-                                            string tag = array[ 3 ];
+                                            string tag = "";
+                                            if ( array. Length == 4 )
+                                            {
+                                                tag = array[ 3 ];
+                                            }
+                                            else
+                                            {
+                                                array = array. Skip( 3 ). ToArray( );
+                                                tag = array. Aggregate((i, j) => string. Format( @"{0}/{1}", i, j ) );
+                                            }
+                                            tag = System. Net. HttpUtility. UrlEncode( tag );
+                                            //string _url =System.Net.HttpUtility.UrlEncode( );
                                             Tool. To( string. Format( "/PostsPage.xaml?tag={0}", tag ) );
                                             return;
 	                                    }

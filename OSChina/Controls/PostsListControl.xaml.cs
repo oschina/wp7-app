@@ -1,6 +1,7 @@
 ﻿using System;
 using System. Collections. Generic;
 using System. Linq;
+using System. Text;
 using System. Net;
 using System. Windows. Controls;
 using System. Windows. Input;
@@ -81,7 +82,7 @@ namespace OSChina. Controls
             };
             if ( this. tag. IsNotNullOrWhitespace( ) )
             {
-                parameters. Add( "tag", this. tag );
+                parameters. Add( "tag", System. Net. HttpUtility. UrlEncode( tag ) );
             }
             else 
             {
