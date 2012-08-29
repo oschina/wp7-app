@@ -18,7 +18,7 @@ wp7-app
 <br/>改为
 #####public partial class LoginPage : WP7_ControlsLib. Controls. ProgressTrayPage
 
-####本项目采用 GPL 授权协议，欢迎大家在这个基础上进行改进，并与大家分享。
+####本项目采用 GPL 授权协议，欢迎大家在这个基础上进行改进，并与大家分享！作者QQ:113020930
 
 App/Config.cs
 >包含应用的配置信息
