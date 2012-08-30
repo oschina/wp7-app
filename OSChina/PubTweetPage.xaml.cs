@@ -68,6 +68,7 @@ namespace OSChina
         private void iconCamera_Click(object sender, EventArgs e)
         {
             CameraCaptureTask task = new CameraCaptureTask( );
+            Config. Cache_TweetPic = null;
             task. Completed += (s, e1) =>
                 {
                     if ( e1. ChosenPhoto != null )
@@ -93,8 +94,11 @@ namespace OSChina
         {
             PhotoChooserTask task = new PhotoChooserTask
             {
+                //PixelWidth = 512,
+                //PixelHeight = 512,
                 ShowCamera = true,
             };
+            Config. Cache_TweetPic = null;
             task. Completed += (s, e1) =>
             {
                 if ( e1. ChosenPhoto != null )
@@ -113,7 +117,13 @@ namespace OSChina
             {
                 task. Show( );
             }
-            catch { }
+            catch (Exception ex)
+            {
+                System. Diagnostics. Debug. WriteLine( ex. Message );
+            }
+            finally
+            {
+            }
         }
 
         private Stream ReduceSize(BitmapImage g_bmp)

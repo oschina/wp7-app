@@ -5,12 +5,12 @@
 using System;
 using System. Windows;
 using System. Windows. Controls;
-using System. Windows. Input;
 using System. Windows. Media;
 using System. Windows. Media. Animation;
 using System. Windows. Media. Imaging;
 using Coding4Fun. Phone. Controls;
 using Microsoft. Phone. Controls;
+using Microsoft. Phone. Tasks;
 using OSChina. Controls;
 using OSChina. Model;
 using OSChina. Model. AppOnly;
@@ -382,5 +382,7 @@ namespace OSChina
         }
 
         #endregion
+
+      
     }
 }
