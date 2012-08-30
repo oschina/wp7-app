@@ -230,6 +230,7 @@
             <shell:ApplicationBarIconButton x:Name="icon_Tweet" IconUri="/Resource/MB_0014_msg3.png" Text="动弹一下" Click="icon_Tweet_Click"/>
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem x:Name="menu_Setting" Text="应用设置" Click="menu_Setting_Click"/>
+                <shell:ApplicationBarMenuItem x:Name="menu_Portrait" Text="更新头像" Click="menu_Portrait_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>

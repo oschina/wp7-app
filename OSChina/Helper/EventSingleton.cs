@@ -103,6 +103,20 @@ namespace OSChina
         }
         #endregion
 
+        #region 修改头像后通知
+        /// <summary>
+        /// 
+        /// </summary>
+        public event EventHandler OnUpdatePortrait;
+        public void RaiseUpdatePortrait( )
+        {
+            if ( this.OnUpdatePortrait != null )
+            {
+                this. OnUpdatePortrait( this, null );
+            }
+        }
+        #endregion
+
         #region Toast消息通知
         /// <summary>
         /// 顶部弹出消息
@@ -149,5 +163,6 @@ namespace OSChina
             }
         }
         #endregion
+
     }
 }

@@ -3,6 +3,8 @@
  * 联系qq: 113020930
  */
 using System;
+using System. IO;
+using System. Collections. Generic;
 using System. Windows;
 using System. Windows. Controls;
 using System. Windows. Media;
@@ -48,6 +50,10 @@ namespace OSChina
                 EventSingleton. Instance. OnGetUserNotice -= Instance_OnGetUserNotice;
             };
             //启动 UserNotice 的获取
+            EventSingleton. Instance. OnUpdatePortrait += (s, e) =>
+                {
+                    this. DisplayMyTweetPortrait( );
+                };
         }
         //用户登陆或注销的事件处理
         void Instance_OnLoginOrLogout(object sender, TagEventArgs e)
@@ -382,6 +388,49 @@ namespace OSChina
         }
 
         #endregion
+
+        private void menu_Portrait_Click(object sender, EventArgs e)
+        {
+            if ( Tool.CheckLogin("请登陆后更新您的头像", "温馨提示") == false)
+            {
+                return;
+            }
+            PhotoChooserTask task = new PhotoChooserTask
+            {
+                PixelHeight = 256,
+                PixelWidth = 256,
+                ShowCamera = true,
+            };
+            task. Completed += (s, e1) =>
+            {
+                if ( e1. ChosenPhoto != null )
+                {
+                    BitmapImage bmpSource = new BitmapImage( );
+                    bmpSource. SetSource( e1. ChosenPhoto );
+                    BitmapImage g_bmp = new BitmapImage( );
+                    g_bmp. CreateOptions = BitmapCreateOptions. DelayCreation;
+                    g_bmp. SetSource( e1. ChosenPhoto );
+                    Stream g_stream = Tool. ReduceSize( g_bmp );
+
+                    //开始后台传输图片
+                    Dictionary<string, object> parameters = new Dictionary<string, object>
+                    {
+                        {"uid", Config.UID},
+                    };
+                    Tool. AsyncUserUpdatePortrait( g_stream, parameters );
+                    //退回
+                    EventSingleton. Instance. ToastMessage( null, "后台正在发送图片更新头像" );
+                }
+            };
+            try
+            {
+                task. Show( );
+            }
+            catch ( Exception ex )
+            {
+                System. Diagnostics. Debug. WriteLine( ex. Message );
+            }
+        }
 
       
     }

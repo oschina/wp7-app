@@ -16,6 +16,7 @@ using System. Windows;
 using System. Windows. Controls;
 using System. Windows. Documents;
 using System. Windows. Media;
+using System. Windows. Media. Imaging;
 using System. Xml. Linq;
 using HtmlAgilityPack;
 using Microsoft. Phone. Controls;
@@ -1918,7 +1919,87 @@ namespace OSChina
                                                                 Config. Cookie,
                                                                 true );
         }
+        /// <summary>
+        /// 后台更新头像
+        /// </summary>
+        /// <param name="gStream">头像数据流</param>
+        /// <param name="parameters">http post 参数</param>
+        public static void AsyncUserUpdatePortrait( Stream gStream, Dictionary<string, object> parameters )
+        {
+            StandardPostClient client = new StandardPostClient { UserAgent = Config. UserAgent };
+            client. DownloadStringCompleted += (s, e1) =>
+            {
+                if ( e1. Error != null )
+                {
+                    EventSingleton. Instance. ToastMessage( "请注意", "用户更新头像失败" );
+                    return;
+                }
+                else
+                {
+                    ApiResult result = Tool. GetApiResult( e1. Result );
+                    if ( result != null )
+                    {
+                        switch ( result. errorCode )
+                        {
+                            case 1:
+                                EventSingleton. Instance. ToastMessage( "温馨提示", "您的头像更新成功" );
+                                ReGetMyInfoOnUpdatePortrait( );
+                                break;
+                            case 0:
+                            case -1:
+                            case -2:
+                                EventSingleton. Instance. ToastMessage( "温馨提示", result. errorMessage );
+                                break;
+                        }
+                    }
+                }
+            };
+            //开始发送
+            client. UploadFilesToRemoteUrl( Config.api_userinfo_update,
+                                                                new string[ ] { "avatar.jpg" },
+                                                                new Stream[ ] { gStream },
+                                                                parameters,
+                                                                Config. Cookie,
+                                                                true, "portrait" );
+        }
 
+        private static void ReGetMyInfoOnUpdatePortrait( )
+        {
+            //然后网络获取
+            Dictionary<string, string> parameters = new Dictionary<string, string>
+                    {
+                        {"uid", Config.UID.ToString()},
+                    };
+            WebClient client = Tool. SendWebClient( Config. api_my_info, parameters );
+            client. DownloadStringCompleted += (s1, e1) =>
+            {
+                if ( e1. Error != null )
+                {
+                    System. Diagnostics. Debug. WriteLine( "获取my-info 时网络错误: {0}", e1. Error. Message );
+                    return;
+                }
+                else
+                {
+                    MyInfo info = Tool. GetMyInfo( e1. Result );
+                    if ( info != null )
+                    {
+                        Config. MyInfo = info;
+                        EventSingleton. Instance. RaiseUpdatePortrait( );
+                    }
+                }
+            };
+        }
+        #endregion
+
+        #region 图像处理
+        public static Stream ReduceSize(BitmapImage g_bmp)
+        {
+            WriteableBitmap wb = new WriteableBitmap( g_bmp );
+            MemoryStream g_MS = new MemoryStream( );
+            System. Windows. Media. Imaging. Extensions. SaveJpeg( wb, g_MS, 800, 640, 0, 82 );
+            g_MS. Seek( 0, SeekOrigin. Begin );
+            return g_MS;
+        }
         #endregion
     }
 }

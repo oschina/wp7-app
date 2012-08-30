@@ -79,7 +79,7 @@ namespace OSChina
                         BitmapImage g_bmp = new BitmapImage( );
                         g_bmp. CreateOptions = BitmapCreateOptions. DelayCreation;
                         g_bmp. SetSource( e1. ChosenPhoto );
-                        g_stream = ReduceSize( g_bmp );
+                        g_stream = Tool. ReduceSize( g_bmp );
                         Config. Cache_TweetPic = g_stream;
                     }
                 };
@@ -109,7 +109,7 @@ namespace OSChina
                     BitmapImage g_bmp = new BitmapImage( );
                     g_bmp. CreateOptions = BitmapCreateOptions. DelayCreation;
                     g_bmp. SetSource( e1. ChosenPhoto );
-                    g_stream = ReduceSize( g_bmp );
+                    g_stream = Tool. ReduceSize( g_bmp );
                     Config. Cache_TweetPic = g_stream;
                 }
             };
@@ -124,15 +124,6 @@ namespace OSChina
             finally
             {
             }
-        }
-
-        private Stream ReduceSize(BitmapImage g_bmp)
-        {
-            WriteableBitmap wb = new WriteableBitmap( g_bmp );
-            MemoryStream g_MS = new MemoryStream( );
-            System. Windows. Media. Imaging. Extensions. SaveJpeg( wb, g_MS, 800, 640, 0, 82 );
-            g_MS. Seek( 0, SeekOrigin. Begin );
-            return g_MS;
         }
 
         private void iconSend_Click(object sender, EventArgs e)
