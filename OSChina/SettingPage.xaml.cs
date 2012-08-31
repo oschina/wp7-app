@@ -1,6 +1,6 @@
 ﻿/*
  * 原作者: 王俊
- * 联系qq: 113020930
+ * 联系邮箱: wangjuntom360@hotmail.com
  */
 using System. Windows;
 using Microsoft. Phone. Controls;
