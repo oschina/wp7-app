@@ -21,7 +21,7 @@ wp7-app
 ####改了以后 不要在Visual studio 中关闭这4个C#文件，让Visual Studio 里始终保持开启着这几个文件。
 <img src="http://static.oschina.net/uploads/space/2012/0831/110731_Vy3b_213217.jpg" />
 
-####本项目采用 GPL 授权协议，欢迎大家在这个基础上进行改进，并与大家分享！作者QQ:113020930
+####本项目采用 GPL 授权协议，欢迎大家在这个基础上进行改进，并与大家分享！作者E-mail: wangjuntom360@hotmail.com
 
 App/Config.cs
 >包含应用的配置信息
