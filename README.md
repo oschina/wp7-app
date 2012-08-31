@@ -19,7 +19,7 @@ wp7-app
 #####public partial class LoginPage : WP7_ControlsLib. Controls. ProgressTrayPage
 
 ####改了以后 不要在Visual studio 中关闭这4个C#文件，<br/>
-让Visual Studio 里始终保持开启着这几个文件
+####让Visual Studio 里始终保持开启着这几个文件
 
 ####本项目采用 GPL 授权协议，欢迎大家在这个基础上进行改进，并与大家分享！作者QQ:113020930
 
