@@ -23,6 +23,10 @@ wp7-app
 
 ####本项目采用 GPL 授权协议，欢迎大家在这个基础上进行改进，并与大家分享！作者E-mail: wangjuntom360@hotmail.com
 
+#####对OSChina/Lib 下的几个Dll说明<br/>
+Code4Fun.xxx 是来自 http://coding4fun.codeplex.com/ 上的开源项目<br/>
+WP7_XXXLib 是来自美盛新创提供的Dll，所有Dll都没有混淆，反编译即可查看到C#源码
+
 App/Config.cs
 >包含应用的配置信息
 
