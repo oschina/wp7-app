@@ -59,7 +59,7 @@
             <controls:PanoramaItem x:Name="newsItem">
                 <controls:PanoramaItem.Header>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Name="lblTitleNews" Text="资讯" Style="{StaticResource style_PanoramaItemTitle}" Foreground="{StaticResource TitleBrush}"  />
+                    <TextBlock x:Name="lblTitleNews" Text="资  讯" Style="{StaticResource style_PanoramaItemTitle}" Foreground="{StaticResource TitleBrush}"  />
                     <Code4Fun:RoundButton Name="btnNews" Click="btnNews_Click" BorderBrush="White" Margin="100,7,0,-10" Background="{StaticResource PhoneAccentBrush}" ImageSource="Resource/newslist.png" FontSize="16" Content="资讯" Foreground="White">
                         <Code4Fun:RoundButton.RenderTransform>
                             <ScaleTransform ScaleX="0.8" ScaleY="0.8" />
